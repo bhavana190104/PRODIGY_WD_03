@@ -1,35 +1,37 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TikTakTo</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <nav class="nvbar">
-        <ul>
-            <li>Tic-Tac-Toe</li>
-            <li><a href="https://www.linkedin.com/in/joybrata-das-489681216" target="#">About me</a></li>
-        </ul>
-    </nav>
-    <div id="gameContainer">
-        <h1>Tic Tac Toe</h1>
-        <div id="cellContainer">
-            <div cellIndex="0" class="cell "></div>
-            <div cellIndex="1" class="cell "></div>
-            <div cellIndex="2" class="cell "></div>
-            <div cellIndex="3" class="cell "></div>
-            <div cellIndex="4" class="cell"></div>
-            <div cellIndex="5" class="cell "></div>
-            <div cellIndex="6" class="cell "></div>
-            <div cellIndex="7" class="cell "></div>
-            <div cellIndex="8" class="cell "></div>
-        </div>
-        <h2 id="statusText"></h2>
-        <button id="restartBtn">Restart</button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Tic Tac Toe</h1>
+      <div id="players" class="players">
+        <input type="text" id="player1" placeholder="Player 1 Name" />
+        <span id="player1-score">0</span>
+        <span>vs</span>
+        <input type="text" id="player2" placeholder="Player 2 Name" />
+        <span id="player2-score">0</span>
+      </div>
+      <button id="start-btn" class="btn">Start Game</button>
+      <button id="restart-btn" class="btn" style="display: none">
+        Restart Game
+      </button>
+      <div id="board" class="board"></div>
+      <div id="status" class="status">
+        Enter player names and start the game!
+      </div>
     </div>
-    <script src="index.js"></script>
-</body>
+    <div id="popup" class="popup">
+      <div id="popup-content" class="popup-content">
+        <span id="popup-message"></span>
+        <button id="popup-close-btn" class="btn">Close</button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
 </html>
